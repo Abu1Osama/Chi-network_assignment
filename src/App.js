@@ -3,14 +3,14 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import { useEffect, useRef, useState } from "react";
 import MovieList from "./Components/MovieList/MovieList";
-import { Route, Router, Routes, Switch } from "react-router-dom";
+import { Route, Router, Routes,} from "react-router-dom";
 import Favourite from "./Pages/Favourites/Favourite";
 import MovieDetails from "./Components/MovieDetails/MovieDetails";
 import { Toaster } from "react-hot-toast";
 
 function App() {
   let initial = useRef(true);
-  const [searchValue, setSearchValue] = useState();
+  const [searchValue, setSearchValue] = useState("hero");
   const [movieList, setMovieList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [movNotFound, setMovNotFound] = useState(false);
